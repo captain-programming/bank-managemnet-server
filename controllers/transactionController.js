@@ -28,7 +28,6 @@ exports.processTransaction = async (req, res) => {
 
     res.json({ message: 'Transaction processed successfully', user: {userId: user._id, email: user.email, accessToken: user.accessToken, amount: user.amount}});
   } catch (error) {
-    console.error(error);
     res.status(500).json({ message: 'Internal Server Error' });
   }
 };
@@ -47,7 +46,6 @@ exports.allTransaction = async (req, res) => {
 
     res.json(transactionList);
   } catch (error) {
-    console.error(error);
     res.status(500).json({ message: 'Internal Server Error' });
   }
 };

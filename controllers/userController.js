@@ -14,7 +14,6 @@ exports.getAllUsers = async (req, res) => {
 
     res.json(userList);
   } catch (error) {
-    console.error(error);
     res.status(500).json({ message: 'Internal Server Error' });
   }
 };
